@@ -1,11 +1,7 @@
 # Linear_Regression
-> 간략한 프로젝트 소개 문구를 작성합니다.
+> Linear Regression 자가 구현
 
-[![NPM Version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
-[![Downloads Stats][npm-downloads]][npm-url]
-
-한 두 문단으로 프로젝트 소개 글을 작성합니다.
+Machine Learning의 기초인 Linear Regression을 직접 구현하고 Weight 와 Bias의 값을 그래프로 확인하여 동작 원리를 올바르게 이해할 수 있도록 설계한 코드입니다.
 
 ![](../header.png)
 
