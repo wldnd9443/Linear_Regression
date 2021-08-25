@@ -18,8 +18,8 @@ mu =  [4,3]
 N = 400
 X = np.random.multivariate_normal(mu, mat_cov, N)
 ```
+![cost_function_img](/cost_fuction.png)
 
-<img src="https://render.githubusercontent.com/render/math?math=\begin{aligned}J(\beta) &= \frac{1}{N} \sum_{i=1}^{N} (x_2 - x_1\beta_1 - \beta_0)^2 \&= \frac{1}{N} \sum_{i=1}^{N} {x_2^2 + x_1^2\beta_1^2 + \beta_0^2- 2 x_1 x_2 \beta_1 - 2 x_2 \beta_0 + 2 x_1 \beta_0 \beta_1}\end{aligned} = -1">
 
 
 _더 많은 예제와 사용법은 [Wiki][wiki]를 참고하세요._
