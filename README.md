@@ -1,23 +1,13 @@
 # Linear_Regression
-> Linear Regression 자가 구현
+> Linear Regression 구현해보기
 
-Machine Learning의 기초인 Linear Regression을 직접 구현하고 Weight 와 Bias의 값을 그래프로 확인하여 동작 원리를 올바르게 이해할 수 있도록 설계한 코드입니다.
+Machine Learning의 기초인 Linear Regression을 직접 구현하고 Weight 와 Bias 그리고 Cost의 값을 그래프로 확인하여 동작 원리를 올바르게 이해할 수 있도록 설계한 파이썬 코드입니다.
 
 ![](../header.png)
 
 ## 소개
 
-OS X & 리눅스:
-
-```sh
-npm install my-crazy-module --save
-```
-
-윈도우:
-
-```sh
-edit autoexec.bat
-```
+Linear Regression은 scikit learn와 같은 라이브러리에서 쉽게 가져와 사용할 수 있습니다. 하지만 Linear Regression을 직접 구현해보고 동작원리를 제대로 파악하지 않는다면 복잡한 상황에서 제대로 활용하기 어렵습니다. 이 Repository에서는 Linear Regression의 Hypothesis를 이루는 Weight, Bias, Cost의 값을 확인하고 나아가 이 값들을 그래프로 표현하여 값의 변화를 확인합니다. 또한 학습이 진행되는 과정에서 H(x)함수가 어떻게 변화하는지 동영상으로 기록하여 확인합니다.
 
 ## 사용 예제
 
