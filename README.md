@@ -18,7 +18,10 @@ mu =  [4,3]
 N = 400
 X = np.random.multivariate_normal(mu, mat_cov, N)
 ```
-![cost_function_img](wldnd9443/Linear_Regression/cost_function.png)
+
+Cost function은 아래와 같이 MSE(Mean Squared Error)로 설정합니다.   
+![cost_function](https://user-images.githubusercontent.com/44831709/130806508-eae6ef66-e175-4f52-acbf-edba20e9aa6f.png)
+
 
 
 
