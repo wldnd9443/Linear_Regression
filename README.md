@@ -18,7 +18,7 @@ mu =  [4,3]
 N = 400
 X = np.random.multivariate_normal(mu, mat_cov, N)
 ```
-![cost_function_img](/cost_fuction.png)
+![cost_function_img](wldnd9443/Linear_Regression/cost_function.png)
 
 
 
