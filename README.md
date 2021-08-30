@@ -83,8 +83,59 @@ beta_0 = history[-1][0]
 plt.grid(True)
 
 ```
+![quick_plot](https://user-images.githubusercontent.com/44831709/131357530-83206b2e-b38b-4f74-803b-8134f507f1ea.png)
+
+위의 데이터를 대표하는 그래프를 찾았기 때문에 앞으로 우리에게 값을 예측해야 하는 과제가 주어진다면, 우리는 입력값 (x1)이 주어질 때 그에 맞는 결과로 이 Linear 함수에서의 결과값을 반환해주면 됩니다.   
+지금까지 주어진 데이터를 대표하는 함수를 찾는 방법으로 학습했습니다. 이 함수를 찾는 과정을 그래프로 확인해 보겠습니다. 
+학습에 진행됨에 따라 beta_1의 변화를 확인합니다.
+
+```
+%matplotlib inline
+np_history = np.array(history)
+plt.rcParams["figure.figsize"] = (14,6)
+plt.plot(np.arange(N_iter+1),np_history[:,1])
+plt.xlabel('N')
+plt.ylabel('beta_1')
+plt.show()
+
+```
+![beta1_plot](https://user-images.githubusercontent.com/44831709/131358333-29d081dd-a5b4-43a6-bea8-9d2a025663c5.png)
+
+beta_0의 변화를 확인합니다.
+
+```
+%matplotlib inline
+np_history = np.array(history)
+plt.rcParams["figure.figsize"] = (14,6)
+plt.plot(np.arange(N_iter+1),np_history[:,0])
+plt.xlabel('N')
+plt.ylabel('beta_0')
+plt.show()
+```
+
+![beta0_plot](https://user-images.githubusercontent.com/44831709/131358587-64e2d377-ea82-4637-9fe0-786dbf5b1db9.png)
 
 
+Cost의 변화를 확인합니다.
+
+```
+cost_list = []
+for b0,b1 in history:
+    cost = (1/N)*np.sum(np.square(x2-x1*b1-b0))
+    cost_list.append(cost)
+    
+np_cost = np.array(cost_list)
+
+%matplotlib inline
+np_history = np.array(history)
+plt.rcParams["figure.figsize"] = (14,6)
+plt.plot(np.arange(N_iter+1),np_cost)
+plt.xlabel('N')
+plt.ylabel('cost')
+plt.show()
+```
+
+![cost_plot](https://user-images.githubusercontent.com/44831709/131359229-dc70a861-f0d3-454a-ac47-4168f2969543.png)
 
 ## 정보
 
