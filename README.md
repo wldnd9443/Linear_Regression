@@ -137,6 +137,6 @@ plt.show()
 
 ![cost_plot](https://user-images.githubusercontent.com/44831709/131359229-dc70a861-f0d3-454a-ac47-4168f2969543.png)
 
-## 정보
+## 참고
 
 https://wikidocs.net/21670
