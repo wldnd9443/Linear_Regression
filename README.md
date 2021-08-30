@@ -20,6 +20,7 @@ mu =  [4,3]
 N = 400
 X = np.random.multivariate_normal(mu, mat_cov, N)
 ```
+![data_generation](https://user-images.githubusercontent.com/44831709/131356943-f9f18275-a9a9-4a50-b16b-2613febfda73.png)
 
 Hypothesis를 다음과 같이 정의합니다.  
 
