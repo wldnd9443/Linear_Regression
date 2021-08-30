@@ -14,7 +14,7 @@ Machine Learning의 기초인 Linear Regression을 직접 구현하고 그래프
 먼저 임의의 2차원 데이터를 경향성이 있도록 설정합니다.  
 
 
-```
+```python
 mat_cov = [[1,0.9],[0.9,1]]
 mu =  [4,3]
 N = 400
@@ -30,7 +30,7 @@ Hypothesis를 다음과 같이 정의합니다.
 
 데이터를 몇 번 학습할지, learning rate는 얼마로 할지 설정하고 임의의 베타값을 설정합니다.
 
-```
+```python
 N_iter = 1000
 N = X.shape[0]
 alpha = 0.05
@@ -49,9 +49,9 @@ Cost function은 아래와 같이 MSE(Mean Squared Error)로 설정합니다.
 ![cost_function](https://user-images.githubusercontent.com/44831709/130806508-eae6ef66-e175-4f52-acbf-edba20e9aa6f.png)
 
 
-데이터를 학습니다. history 에 베타값을 저장하고 나중에 그래프를 그릴 때 활용합니다.
+데이터를 학습합니다. history 에 베타값을 저장하고 나중에 그래프를 그릴 때 활용합니다.
 
-```
+```python
 history = []
 history.append([beta_0,beta_1])
 for i in range(N_iter):
@@ -63,7 +63,7 @@ for i in range(N_iter):
 ```
 
 학습을 완료한 후 초기에 분포했던 데이터와 이를 대표하는 1차함수, Linear Graph를 함께 확인합니다.
-```
+```python
 %matplotlib inline
 import numpy as np
 import matplotlib.pyplot as plt
@@ -82,14 +82,14 @@ beta_0 = history[-1][0]
 
 plt.grid(True)
 
-```
+```python
 ![quick_plot](https://user-images.githubusercontent.com/44831709/131357530-83206b2e-b38b-4f74-803b-8134f507f1ea.png)
 
 위의 데이터를 대표하는 그래프를 찾았기 때문에 앞으로 우리에게 값을 예측해야 하는 과제가 주어진다면, 우리는 입력값 (x1)이 주어질 때 그에 맞는 결과로 이 Linear 함수에서의 결과값을 반환해주면 됩니다.   
 지금까지 주어진 데이터를 대표하는 함수를 찾는 방법으로 학습했습니다. 이 함수를 찾는 과정을 그래프로 확인해 보겠습니다. 
 학습에 진행됨에 따라 beta_1의 변화를 확인합니다.
 
-```
+```python
 %matplotlib inline
 np_history = np.array(history)
 plt.rcParams["figure.figsize"] = (14,6)
@@ -103,7 +103,7 @@ plt.show()
 
 beta_0의 변화를 확인합니다.
 
-```
+```python
 %matplotlib inline
 np_history = np.array(history)
 plt.rcParams["figure.figsize"] = (14,6)
@@ -118,7 +118,7 @@ plt.show()
 
 Cost의 변화를 확인합니다.
 
-```
+```python
 cost_list = []
 for b0,b1 in history:
     cost = (1/N)*np.sum(np.square(x2-x1*b1-b0))
