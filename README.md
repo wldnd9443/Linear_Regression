@@ -62,6 +62,28 @@ for i in range(N_iter):
 
 ```
 
+학습을 완료한 후 초기에 분포했던 데이터와 이를 대표하는 1차함수, Linear Graph를 함께 확인합니다.
+```
+%matplotlib inline
+import numpy as np
+import matplotlib.pyplot as plt
+
+## draw a graph: x2 = beta_1*x1 + beta_0 
+xt= np.arange(0,10,0.1)
+plt.plot(xt, xt*beta_1+beta_0)
+
+
+plt.plot(X[:,0],X[:,1],'.')
+plt.xlabel('X1')
+plt.ylabel('X2')
+beta_1 = history[-1][1]
+beta_0 = history[-1][0]
+
+
+plt.grid(True)
+
+```
+
 
 
 ## 정보
